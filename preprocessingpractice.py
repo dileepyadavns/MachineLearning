@@ -29,8 +29,8 @@ print(y)
 
 from sklearn.impute import SimpleImputer
 imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
-imputer.fit(x[:, 1:3])
-x[:, 1:3] = imputer.transform(x[:, 1:3])
+imputer.fit(x[:, 1:3]) # fit will search for missing values and find mean
+x[:, 1:3] = imputer.transform(x[:, 1:3]) # transform is used to change the missing values with the mean.
 
 """## Encoding categorical data"""
 
