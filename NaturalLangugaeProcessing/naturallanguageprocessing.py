@@ -44,8 +44,7 @@ for i in range(0,1000):
 
 print(corpus)
 
-"""# Creating Bag of Model"""
-
+# Creating Bag of Model
 from sklearn.feature_extraction.text import CountVectorizer
 cv=CountVectorizer(max_features=1500) #max_features will set the maximum ammount features to be considered by doing vectorization.
 x=cv.fit_transform(corpus).toarray() 
